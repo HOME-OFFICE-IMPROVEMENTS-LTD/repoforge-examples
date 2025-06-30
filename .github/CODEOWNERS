@@ -1,0 +1,30 @@
+# CODEOWNERS file for security and quality assurance
+# Global code owners - security team reviews all changes
+* @home-office-improvements-ltd/security-team @msalsouri
+
+# Security-related files require additional approval
+.github/SECURITY.md @home-office-improvements-ltd/security-team
+.github/dependabot.yml @home-office-improvements-ltd/security-team
+.github/workflows/security.yml @home-office-improvements-ltd/security-team
+
+# Infrastructure and deployment files
+**/azure.yaml @home-office-improvements-ltd/devops-team @msalsouri
+**/Dockerfile* @home-office-improvements-ltd/devops-team
+**/docker-compose* @home-office-improvements-ltd/devops-team
+**/*.bicep @home-office-improvements-ltd/devops-team
+**/*.tf @home-office-improvements-ltd/devops-team
+
+# Package and dependency files
+package*.json @home-office-improvements-ltd/security-team
+requirements*.txt @home-office-improvements-ltd/security-team
+**/pom.xml @home-office-improvements-ltd/security-team
+**/build.gradle @home-office-improvements-ltd/security-team
+
+# Configuration files that may contain sensitive settings
+**/*.env* @home-office-improvements-ltd/security-team
+**/*.config* @home-office-improvements-ltd/security-team
+**/appsettings*.json @home-office-improvements-ltd/security-team
+
+# RepoForge specific files
+**/repoforge* @msalsouri @home-office-improvements-ltd/repoforge-team
+**/mobot* @msalsouri @home-office-improvements-ltd/ai-team
